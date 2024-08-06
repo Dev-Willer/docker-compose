@@ -1,0 +1,19 @@
+services:
+  web:
+    name: Front-end
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    environment:
+      - NGINX_HOST=foobar.com
+      - NGINX_PORT=80
+
+
+  web2:
+    name: Back-end
+    image: nginx:alpine
+    ports:
+      - "8081:80"
+    environment:
+      - NGINX_HOST=foobar.com
+      - NGINX_PORT=80
